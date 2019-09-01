@@ -213,5 +213,31 @@ struct HardwareMapping matrix_hardware_mappings[] = {
     .p0_b2         = GPIO_BIT(25),
   },
 
+  /*
+   * Mapping for rk8 HAT offering just one screen/chain.
+   * https://github.com/rk-8/hat
+   */
+  {
+   .name          = "rk8-hat",
+
+   .output_enable = GPIO_BIT(7),
+   .clock         = GPIO_BIT(11),
+   .strobe        = GPIO_BIT(8),
+
+   /* Address lines */
+   .a             = GPIO_BIT(10),
+   .b             = GPIO_BIT(23),
+   .c             = GPIO_BIT(9),
+   .d             = GPIO_BIT(25),
+
+   /* Parallel chain 0, RGB for both sub-panels */
+   .p0_r1         = GPIO_BIT(2),
+   .p0_g1         = GPIO_BIT(3),
+   .p0_b1         = GPIO_BIT(14),
+   .p0_r2         = GPIO_BIT(4),
+   .p0_g2         = GPIO_BIT(15),
+   .p0_b2         = GPIO_BIT(18),
+  },
+
   {0}
 };
